@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: attendance-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL        # paste the Internal Database URL from Render PostgreSQL
+        sync: false
+      - key: CORS_ORIGIN         # your Vercel URL, e.g. https://attendance-app.vercel.app
+        sync: false
+      - key: DB_SSL
+        value: "false"
