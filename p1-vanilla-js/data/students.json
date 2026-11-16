@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Aarav Patil", "rollNo": "101", "date": "2026-11-10", "status": "Present" },
+  { "id": 2, "name": "Diya Sharma", "rollNo": "102", "date": "2026-11-10", "status": "Absent" },
+  { "id": 3, "name": "Kabir Joshi", "rollNo": "103", "date": "2026-11-10", "status": "Present" },
+  { "id": 4, "name": "Meera Nair", "rollNo": "104", "date": "2026-11-10", "status": "Late" }
+]

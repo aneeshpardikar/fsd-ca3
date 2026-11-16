@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Attendance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Student attendance</h1>
+    <div id="message" role="status" hidden></div>
+
+    <form id="attendance-form" novalidate>
+      <label>Name <input id="name" type="text" placeholder="Full name" /></label>
+      <label>Roll no. <input id="rollNo" type="text" inputmode="numeric" placeholder="e.g. 105" /></label>
+      <label>Date <input id="date" type="date" /></label>
+      <label>Status
+        <select id="status">
+          <option>Present</option><option>Absent</option><option>Late</option>
+        </select>
+      </label>
+      <button type="submit">Add record</button>
+    </form>
+
+    <div class="toolbar">
+      <label>Sort by
+        <select id="sortKey">
+          <option value="name">Name</option>
+          <option value="rollNo">Roll no.</option>
+          <option value="date">Date</option>
+          <option value="status">Status</option>
+        </select>
+      </label>
+      <button id="sortDir" type="button">Ascending</button>
+      <button id="reload" type="button">Reload from server</button>
+      <span id="summary"></span>
+    </div>
+
+    <table>
+      <thead><tr><th>Roll no.</th><th>Name</th><th>Date</th><th>Status</th><th>Actions</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <p id="loading" hidden>Loading records…</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
